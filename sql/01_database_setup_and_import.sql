@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS sales (
 -- ============================================================
 
 LOAD DATA LOCAL INFILE
-'C:/Users/LENOVO/Downloads/Analyst Project1/Maven Toys Data/products.csv'
+'C:/path/to/Maven Toys Data/products.csv' -- Update the file path to match the location of your downloaded CSV files.
 INTO TABLE products_raw
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -114,7 +114,7 @@ FROM products_raw;
 -- ============================================================
 
 LOAD DATA LOCAL INFILE
-'C:/Users/LENOVO/Downloads/Analyst Project1/Maven Toys Data/stores.csv'
+'C:/path/to/Maven Toys Data/stores.csv' -- Update the file path to match the location of your downloaded CSV files.
 INTO TABLE stores
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -135,7 +135,7 @@ IGNORE 1 LINES
 -- ============================================================
 
 LOAD DATA LOCAL INFILE
-'C:/Users/LENOVO/Downloads/Analyst Project1/Maven Toys Data/calendar.csv'
+'C:/path/to/Maven Toys Data/calendar.csv' -- Update the file path to match the location of your downloaded CSV files.
 INTO TABLE calendar
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
@@ -148,7 +148,7 @@ SET `Date` = STR_TO_DATE(TRIM(@raw_date), '%m/%d/%Y');
 -- ============================================================
 
 LOAD DATA LOCAL INFILE
-'C:/Users/LENOVO/Downloads/Analyst Project1/Maven Toys Data/inventory.csv'
+'C:/path/to/Maven Toys Data/inventory.csv' -- Update the file path to match the location of your downloaded CSV files.
 INTO TABLE inventory
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -166,7 +166,7 @@ IGNORE 1 LINES
 -- ============================================================
 
 LOAD DATA LOCAL INFILE
-'C:/Users/LENOVO/Downloads/Analyst Project1/Maven Toys Data/sales.csv'
+'C:/path/to/Maven Toys Data/sales.csv' -- Update the file path to match the location of your downloaded CSV files.
 INTO TABLE sales
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
